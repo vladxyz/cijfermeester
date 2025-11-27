@@ -6,9 +6,5 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [react()],
-    define: {
-      // Puts the API key from Vercel environment variables into the code
-      'process.env.API_KEY': JSON.stringify(env.API_KEY)
-    }
   };
 });
